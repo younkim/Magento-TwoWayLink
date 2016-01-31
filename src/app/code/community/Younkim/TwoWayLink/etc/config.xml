@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Bi-directional prouct association
+ *
+ * @category  Younkim
+ * @package   Younkim_TwoWayLink
+ * @author    Youn Kim <younwkim@gmail.com>
+ * @author    Brad Traynham <btray77@gmail.com>
+ * @copyright Copyright (c) 2016 Youn Kim (https://github.com/younkim)
+ * @license   http://www.gnu.org/licenses/gpl-3.0.html
+ */
+-->
+<config>
+    <modules>
+        <Younkim_TwoWayLink>
+            <version>1.0.0</version>
+        </Younkim_TwoWayLink>
+    </modules>
+    <global>
+        <models>
+            <twowaylink>
+                <class>Younkim_TwoWayLink_Model</class>
+            </twowaylink>
+            <twowaylink_resource>
+                <class>Younkim_TwoWayLink_Model_Resource</class>
+            </twowaylink_resource>
+        </models>
+        <blocks>
+            <twowaylink>
+                <class>Younkim_TwoWayLink_Block</class>
+            </twowaylink>
+            <adminhtml>
+                <rewrite>
+                    <catalog_product_grid>Younkim_TwoWayLink_Block_Adminhtml_Catalog_Product_Grid</catalog_product_grid>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+        <helpers>
+            <twowaylink>
+                <class>Younkim_TwoWayLink_Helper</class>
+            </twowaylink>
+        </helpers>
+        <events>
+            <catalog_product_save_before>
+                <observers>
+                    <two_way_remove>
+                        <type>singleton</type>
+                        <class>twowaylink/observer</class>
+                        <method>cacheRemovedIds</method>
+                    </two_way_remove>
+                </observers>
+            </catalog_product_save_before>
+            <catalog_product_save_after>
+                <observers>
+                    <two_way_link>
+                        <type>singleton</type>
+                        <class>twowaylink/observer</class>
+                        <method>reverseLink</method>
+                    </two_way_link>
+                </observers>
+            </catalog_product_save_after>
+        </events>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Younkim_TwoWayLink after="Mage_Adminhtml">Younkim_TwoWayLink_Adminhtml</Younkim_TwoWayLink>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <default>
+        <twowaylink>
+            <general>
+                <enabled>0</enabled>
+                <logging>0</logging>
+            </general>
+        </twowaylink>
+    </default>
+</config>

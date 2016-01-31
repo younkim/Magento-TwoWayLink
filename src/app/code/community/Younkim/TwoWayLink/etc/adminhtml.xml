@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Bi-directional prouct association
+ *
+ * @category  Younkim
+ * @package   Younkim_TwoWayLink
+ * @author    Youn Kim <younwkim@gmail.com>
+ * @author    Brad Traynham <btray77@gmail.com>
+ * @copyright Copyright (c) 2016 Youn Kim (https://github.com/younkim)
+ * @license   http://www.gnu.org/licenses/gpl-3.0.html
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <twowaylink>
+                        <title>Two-Way Link</title>
+                        <sort_order>5</sort_order>
+                    </twowaylink>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <twowaylink translate="title" module="twowaylink">
+                                        <title>Two-Way Link</title>
+                                    </twowaylink>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

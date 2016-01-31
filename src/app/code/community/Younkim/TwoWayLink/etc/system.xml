@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Bi-directional prouct association
+ *
+ * @category  Younkim
+ * @package   Younkim_TwoWayLink
+ * @author    Youn Kim <younwkim@gmail.com>
+ * @author    Brad Traynham <btray77@gmail.com>
+ * @copyright Copyright (c) 2016 Youn Kim (https://github.com/younkim)
+ * @license   http://www.gnu.org/licenses/gpl-3.0.html
+ */
+-->
+<config>
+    <sections>
+        <twowaylink translate="label" module="twowaylink">
+            <label>Two-Way Link</label>
+            <tab>catalog</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>0</show_in_website>
+            <show_in_store>0</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <expanded>1</expanded>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enabled</label>
+                            <comment><![CDATA[Disabling extension will cease two-way linking and removal entirely]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </enabled>
+                        <logging translate="label">
+                            <label>Logging</label>
+                            <comment><![CDATA[Logging is disabled if extension is disabled. See younkim_twowaylink.log.]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>200</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </logging>
+                    </fields>
+                </general>
+            </groups>
+        </twowaylink>
+    </sections>
+</config>

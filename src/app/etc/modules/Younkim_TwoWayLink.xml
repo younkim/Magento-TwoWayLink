@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Bi-directional prouct association
+ *
+ * @category  Younkim
+ * @package   Younkim_TwoWayLink
+ * @author    Youn Kim <younwkim@gmail.com>
+ * @author    Brad Traynham <btray77@gmail.com>
+ * @copyright Copyright (c) 2016 Youn Kim (https://github.com/younkim)
+ * @license   http://www.gnu.org/licenses/gpl-3.0.html
+ */
+-->
+<config>
+    <modules>
+        <Younkim_TwoWayLink>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Catalog />
+            </depends>
+        </Younkim_TwoWayLink>
+    </modules>
+</config>
