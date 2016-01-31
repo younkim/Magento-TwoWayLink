@@ -1,1 +1,6 @@
+vendor/
+
+composer.json
+composer.lock
+.travis.yml
 *.DS_*

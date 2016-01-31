@@ -29,13 +29,13 @@ Alternatively, use the extension manager, `modman`.
 ```
 cd /path/to/magento/
 modman init
-modman clone https://github.com/younkim/twowayrelation.git
+modman clone https://github.com/younkim/Magento-TwoWayLink.git
 ```
 
 ## Release Notes
 
-### v1.1.0: 2016-01-28
-- Cleaned up code.
+### v1.2.0: 2016-01-28
+- Refactored code.
 
 ### v1.1.0: 2015-05-17
 - Implemented mass-update options available from the admin product grid.
