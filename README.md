@@ -34,6 +34,9 @@ modman clone https://github.com/younkim/Magento-TwoWayLink.git
 
 ## Release Notes
 
+### v1.2.1: 2016-09-12
+- Removed test exception throw in link removal.
+
 ### v1.2.0: 2016-01-28
 - Refactored code.
 
