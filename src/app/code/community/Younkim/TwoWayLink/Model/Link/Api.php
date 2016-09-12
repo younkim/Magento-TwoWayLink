@@ -34,7 +34,6 @@ class Younkim_TwoWayLink_Model_Link_Api
             ->getFirstItem();
 
         try {
-            throw new Exception('test error');
             $temp = $link->delete();
             return;
 
