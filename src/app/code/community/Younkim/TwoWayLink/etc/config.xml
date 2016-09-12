@@ -14,7 +14,7 @@
 <config>
     <modules>
         <Younkim_TwoWayLink>
-            <version>1.0.0</version>
+            <version>1.2.1</version>
         </Younkim_TwoWayLink>
     </modules>
     <global>
