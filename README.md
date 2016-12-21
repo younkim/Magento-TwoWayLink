@@ -2,7 +2,7 @@
 
 ## Features
 
-This exntesion performs bi-directional linking of related products when suck associations are made. Natively, Magento's related products associations are one-way.
+This exntesion performs bi-directional linking of related products when such associations are made. Natively, Magento's related products associations are one-way.
 
 For example, if Product B is associated as a related product to Product A, then this extension automatically associates Product A to Product B as well. This is called a _bi-directional link_. This is works only in the admin.
 
