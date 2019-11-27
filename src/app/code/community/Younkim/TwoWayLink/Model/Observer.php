@@ -80,6 +80,9 @@ class Younkim_TwoWayLink_Model_Observer
 
         // Grab related product link data
         $relatedLinkData = $product->getRelatedLinkData();
+        if (is_null($relatedLinkData)) {
+            return;
+        }
         $relatedLinkData[$product->getId()] = array('position' => null);
 
 
